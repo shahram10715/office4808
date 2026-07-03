@@ -15,28 +15,64 @@
 </header>
 
 <div class="container">
-    <div class="section">
-        <h2 class="section-title">درباره ما</h2>
-        <p>
-            دفتر طراحی سازه ما با تکیه بر تجربه، دانش فنی و بهره‌گیری از جدیدترین
-             استانداردهای مهندسی، خدمات تخصصی در زمینه تحلیل، طراحی و بهینه‌سازی انواع سازه‌های ساختمانی
-              و صنعتی ارائه می‌دهد. هدف ما ایجاد طرح‌هایی ایمن، اقتصادی و کارآمد است که علاوه بر
-            رعایت اصول فنی، نیازهای کارفرما و شرایط اجرایی پروژه را نیز به بهترین شکل پاسخ دهد. ما رویکردی
-            دقیق و مسئولانه، از مرحله ایده و مطالعات اولیه تا ارائه نقشه‌های اجرایی و نظارت بر حسن انجام کار
-             در کنار شما هستیم. تعهد به کیفیت، ارائه راه‌حل‌های مهندسی نوآورانه و احترام به زمان
-              و بودجه پروژه، سه اصل کلیدی فعالیت ماست.
-        </p>
-    </div>
+    <nav class="tabs">
+        <ul class="tab-buttons">
+            <li><button class="tab-button active" data-tab="home">خانه</button></li>
+            <li><button class="tab-button" data-tab="projects">پروژه ها</button></li>
+            <li><button class="tab-button" data-tab="services">خدمات</button></li>
+            <li><button class="tab-button" data-tab="contact">تماس</button></li>
+        </ul>
+    </nav>
 
-    <div class="section">
-        <h2 class="section-title">تماس با ما</h2>
+    <div class="tab-contents">
+        <section id="home" class="tab-content active">
+            <h2 class="section-title">درباره ما</h2>
+            <p>
+                دفتر طراحی سازه ما با تکیه بر تجربه، دانش فنی و بهره‌گیری از جدیدترین
+                استانداردهای مهندسی، خدمات تخصصی در زمینه تحلیل، طراحی و بهینه‌سازی انواع سازه‌های ساختمانی
+                و صنعتی ارائه می‌دهد. هدف ما ایجاد طرح‌هایی ایمن، اقتصادی و کارآمد است که علاوه بر
+                رعایت اصول فنی، نیازهای کارفرما و شرایط اجرایی پروژه را نیز به بهترین شکل پاسخ دهد. ما رویکردی
+                دقیق و مسئولانه، از مرحله ایده و مطالعات اولیه تا ارائه نقشه‌های اجرایی و نظارت بر حسن انجام کار
+                در کنار شما هستیم. تعهد به کیفیت، ارائه راه‌حل‌های مهندسی نوآورانه و احترام به زمان
+                و بودجه پروژه، سه اصل کلیدی فعالیت ماست.
+            </p>
+        </section>
 
-        <p class="contact-item"><strong>Phone:</strong> +98 917 711 9892</p>
-        <p class="contact-item"><strong>Phone:</strong> +98 936 171 3919</p>
-        <p class="contact-item"><strong>WhatsApp:</strong> +98 917 711 9892</p>
-        <!-- <p class="contact-item"><strong>Instagram:</strong> instagram.com/random_user_123</p> -->
+        <section id="projects" class="tab-content">
+            <h2 class="section-title">پروژه ها</h2>
+            <p>لیست پروژه‌ها و نمونه کارها به زودی اضافه خواهد شد.</p>
+        </section>
+
+        <section id="services" class="tab-content">
+            <h2 class="section-title">خدمات</h2>
+            <p>خدمات ما شامل طراحی سازه، تحلیل سازه و مشاوره مهندسی است.</p>
+        </section>
+
+        <section id="contact" class="tab-content">
+            <h2 class="section-title">تماس با ما</h2>
+
+            <p class="contact-item"><strong>Phone:</strong> +98 917 711 9892</p>
+            <p class="contact-item"><strong>Phone:</strong> +98 936 171 3919</p>
+            <p class="contact-item"><strong>WhatsApp:</strong> +98 917 711 9892</p>
+        </section>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.tab-button');
+        const contents = document.querySelectorAll('.tab-content');
+
+        function activate(tab) {
+            buttons.forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+            contents.forEach(c => c.classList.toggle('active', c.id === tab));
+        }
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => activate(btn.dataset.tab));
+        });
+    });
+</script>
 
 <!--
 <div class="footer">

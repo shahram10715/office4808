@@ -52,3 +52,43 @@ header p {
     font-size: 14px;
     background: #eee;
 }
+
+/* Tabs styles */
+.tabs {
+    direction: rtl;
+    margin-bottom: 20px;
+}
+
+.tab-buttons {
+    direction: rtl;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start; /* in RTL, flex-start is the right side */
+}
+
+.tab-button {
+    background: transparent;
+    border: 1px solid #d0d7df;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #003366;
+}
+
+.tab-button.active {
+    background: #003366;
+    color: #fff;
+    border-color: #003366;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
