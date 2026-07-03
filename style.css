@@ -71,7 +71,7 @@ header p {
 
 .tab-button {
     background: transparent;
-    border: 1px solid #d0d7df;
+    border: none;
     padding: 8px 14px;
     border-radius: 6px;
     cursor: pointer;
