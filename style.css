@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Vazirmatn', Arial, sans-serif;
     background: #f5f7fa;
     color: #333;
 }
@@ -51,6 +51,37 @@ header p {
     margin-top: 40px;
     font-size: 14px;
     background: #eee;
+    color: #555;
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.services-list li {
+    position: relative;
+    padding: 12px 30px 12px 0;
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 1.7;
+    border-bottom: 1px solid #eee;
+}
+
+.services-list li:last-child {
+    border-bottom: none;
+}
+
+.services-list li::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    background: #003366;
+    border-radius: 50%;
 }
 
 /* Tabs styles */
@@ -77,6 +108,16 @@ header p {
     cursor: pointer;
     font-size: 16px;
     color: #003366;
+    font-family: inherit;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tab-button:hover {
+    background: #e6edf5;
+}
+
+.tab-button.active:hover {
+    background: #003366;
 }
 
 .tab-button.active {
