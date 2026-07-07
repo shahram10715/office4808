@@ -92,3 +92,54 @@ header p {
 .tab-content.active {
     display: block;
 }
+
+/* Project items: text + images side by side on laptop */
+.project-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.project-item:last-child {
+    border-bottom: none;
+}
+
+.project-text {
+    flex: 1;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.project-images {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.project-images img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* Mobile: stack text above images */
+@media (max-width: 700px) {
+    .project-item {
+        flex-direction: column;
+    }
+
+    .project-images {
+        justify-content: flex-start;
+    }
+
+    .project-images img {
+        max-width: 100%;
+    }
+}
